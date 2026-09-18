@@ -414,4 +414,23 @@ document.querySelectorAll('.jetrk-btn').forEach(function(button) {
     });
   });
 });
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll("#jetrk-page .jetrk-btn").forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      if (typeof fbq === "function") {
+        fbq("trackCustom", "TelegramJoin", {
+          button_text: this.innerText.trim()
+        });
+      }
+
+    });
+
+  });
+
+});
+</script>
 </script>
